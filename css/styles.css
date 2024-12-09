@@ -1,0 +1,223 @@
+
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --vermelho: #ef2121;
+    --laranja: #f57c00;
+    --laranja-claro: #f8a541;
+    --vermelho-claro: #ff5c5c;
+}
+
+/* Fundo animado do site */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(45deg, var(--vermelho), var(--laranja));
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    padding: 0 20px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(to right, var(--vermelho), var(--laranja));
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navegação */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--laranja-claro);
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right, var(--vermelho-claro), var(--laranja));
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Seções */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.projeto {
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, var(--vermelho-claro), var(--laranja-claro));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projeto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.projeto img {
+    border-radius: 8px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.projeto img:hover {
+    transform: scale(1.1);
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, var(--vermelho-claro), var(--laranja-claro));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #fcdfdf;
+    border-radius: 8px;
+    background: #fdf1f1;
+    transition: all 0.3s ease;
+}
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--vermelho);
+    background: #fff;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+form button {
+    padding: 12px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(to right, var(--vermelho), var(--laranja));
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.5s ease;
+}
+form button:hover {
+    background: linear-gradient(to left, var(--laranja), var(--vermelho));
+    transform: translateY(-2px);
+}
+form h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+form p {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Foto de perfil */
+.minha-foto {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, var(--vermelho), var(--laranja));
+    background-clip: padding-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.minha-foto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+@keyframes pulseBorder {
+    0% { background: linear-gradient(45deg, var(--vermelho), var(--laranja)); }
+    50% { background: linear-gradient(45deg, var(--laranja), var(--vermelho)); }
+    100% { background: linear-gradient(45deg, var(--vermelho), var(--laranja)); }
+}
+.minha-foto:hover::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--vermelho), var(--laranja));
+    animation: pulseBorder 2s infinite;
+    box-shadow: 0 0 20px rgba(255, 100, 100, 0.6);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    background: linear-gradient(to right, var(--laranja), var(--vermelho));
+    padding: 10px 0;
+}
+
+
+
+

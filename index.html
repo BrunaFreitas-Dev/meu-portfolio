@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta informações básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meu portfólio pessoal">
+    <title>Meu Portfólio</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <!-- Links de navegação -->
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal do site -->
+    <main>
+        <!-- Seção "Sobre mim" -->
+        <section id="sobre">
+            <h2 style="text-align: center; color: var(--vermelho); animation: fadeIn 2s;">
+                Sobre Mim
+            </h2>
+            <img src="images/minha-foto.jpg" alt="Minha foto" class="minha-foto">
+            <p>Olá! Meu nome é Bruna Freitas, e tenho 19 anos. Sou apaixonada por livros de suspense e por música, especialmente nos estilos K-pop e Rock. Em junho de 2024, iniciei minha jornada na faculdade de Análise e Desenvolvimento de Sistemas, uma experiência que tem sido transformadora e repleta de aprendizado. Desde cedo, tenho um grande interesse por tecnologia e pelo prazer de descobrir coisas novas. Meu objetivo é desenvolver projetos inovadores que não apenas contribuam para minha evolução pessoal e profissional, mas também causem um impacto positivo na vida das pessoas.</p>
+        </section>
+
+        <!-- Seção de formação acadêmica -->
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <ul>
+                <li>Ensino Médio Completo - E.E Prof° Mario Arminante</li>
+                <li>Ensino superior: Análise e Desenvolvimento de Sistemas - UNINTER (Cursando) </li>
+            </ul>
+            
+            <h2>Cursos Complementares</h2>
+            <ul>
+                <li>Curso Técnico em Secretariado - Instituto Social Nossa Senhora de Fátima</li>
+            </ul>
+            
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Inglês: Básico ao Intermediário</li>
+                <li>Espanhol Básico</li>
+            </ul>
+        </section>
+
+        <!-- Seção de portfólio -->
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <div class="projetos">
+                <div class="projeto">
+                    <h3>Mario Jump</h3>
+                    <a href="file:///C:/Users/Bruna%20Silva/Desktop/Projetos/MARIO-JUMP/index.html" target="_blank">
+                        <img src="./images/jogo-mario.jpg" alt="Jogo mario">
+                    </a>
+                    <p>Este é o meu primeiro projeto de jogo! Desenvolvi utilizando HTML, CSS e JavaScript. É um jogo simples, mas divertido e altamente viciante. Nele, o personagem Mario precisa saltar por cima dos canos sem tocá-los. Se encostar, o jogo termina.</p>
+                </div>
+                <div class="projeto">
+                    <h3>Relógio Digital</h3>
+                    <a href="file:///C:/Users/Bruna%20Silva/Desktop/Projetos/Rel%C3%B3gio%20digital/index.html" target="_blank">
+                        <img src="./images/relogio-digital.jpg" alt="Relogio digital">
+                    </a>
+                    <p>Este relógio digital foi um projeto simples de realizar, onde pude aplicar meus conhecimentos em HTML, JavaScript e CSS. Ele funciona em tempo real e foi uma experiência interessante de aprendizado.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Seção de contato -->
+        <section id="contato">
+            <form id="form-contato" action="#" method="POST">
+                <h2>Fale Comigo</h2>
+                <p>Estou sempre disposta a novas oportunidades e ideias.</p>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Seu email" required>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 Bruna Isabelly Freitas Silva. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
